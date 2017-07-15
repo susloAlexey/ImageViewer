@@ -8,7 +8,7 @@ module.exports = function (grunt) {
             options: {
                 livereload: true
             },
-            files: ['src/**/*'],
+            files: ['src/**/*', 'index.html'],
             tasks: ['build-debug'],
         },
         connect: {
