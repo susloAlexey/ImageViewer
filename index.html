@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Photo Viewer Application">
+    <meta name="author" content="Alex">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Photo Viewer</title>
+
+    <link rel="shortcut icon" href="src/assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="src/assets/css/layout.css">
+</head>
+
+<body ng-app="imageViewer" ng-cloak>
+    <div class="app-page">
+        <div class="page-wrap">
+            <app-header></app-header>
+            <div class="app-page-body">
+                <div ui-view></div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+
+    <!-- Application Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.4/angular-resource.min.js"></script>
+
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="src/app/app.js"></script>
+    <script src="src/app/shared/header/header.directive.js"></script>
+    <script src="src/app/modules/images-list/images-list.controller.js"></script>
+    <script src="src/app/modules/status/status.controller.js"></script>
+    <script src="src/app/modules/user-profile/user-profile.controller.js"></script>
+</body>
+
+</html>
