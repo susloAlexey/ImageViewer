@@ -1,1 +1,6 @@
-Images List
+<div ng-if="vm.loading">Loading images...</div>
+<div ng-if="!vm.loading" ng-repeat="img in vm.images track by $index">
+    <a ui-sref="image({ imageId: img.id })">
+        <img ng-src="{{img.thumbnailUrl}}">
+    </a>
+</div>

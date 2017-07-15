@@ -3,17 +3,17 @@
 
     angular
         .module('imageViewer')
-        .directive('appHeader', appHeader);
+        .directive('appFooter', appFooter);
 
-    function appHeader() {
+    function appFooter() {
 
         var directive = {
             restrict: 'EA',
-            templateUrl: 'src/app/shared/header/header.directive.html',
+            templateUrl: 'src/app/shared/directives/footer/footer.directive.html',
             replace: true,
             scope: {},
             link: link,
-            controller: HeaderController,
+            controller: FooterController,
             controllerAs: 'vm',
             bindToController: true
         };
@@ -24,9 +24,9 @@
         }
     }
 
-    HeaderController.$inject = [];
+    FooterController.$inject = [];
 
-    function HeaderController() {
+    function FooterController() {
 
         var vm = this;
 

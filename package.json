@@ -1,7 +1,7 @@
 {
-  "name": "photo-viewer",
+  "name": "image-viewer",
   "version": "1.0.0",
-  "description": "Photo Viewer App",
+  "description": "Image Viewer App",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

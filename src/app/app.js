@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('imageViewer', ['ui.router'])
+        .module('imageViewer', ['ui.router', 'ngResource'])
         .config(function ($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise('/');
