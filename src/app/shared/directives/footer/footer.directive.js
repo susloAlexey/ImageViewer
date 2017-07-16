@@ -12,24 +12,13 @@
             templateUrl: 'app/shared/directives/footer/footer.directive.html',
             replace: true,
             scope: {},
-            link: link,
-            controller: FooterController,
-            controllerAs: 'vm',
-            bindToController: true
+            link: link
         };
 
         return directive;
 
         function link(scope, el, attr, ctrl) {
         }
-    }
-
-    FooterController.$inject = [];
-
-    function FooterController() {
-
-        var vm = this;
-
     }
 })();
 

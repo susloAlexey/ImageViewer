@@ -12,24 +12,13 @@
             templateUrl: 'app/shared/directives/header/header.directive.html',
             replace: true,
             scope: {},
-            link: link,
-            controller: HeaderController,
-            controllerAs: 'vm',
-            bindToController: true
+            link: link
         };
 
         return directive;
 
         function link(scope, el, attr, ctrl) {
         }
-    }
-
-    HeaderController.$inject = [];
-
-    function HeaderController() {
-
-        var vm = this;
-
     }
 })();
 
