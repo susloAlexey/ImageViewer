@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.app-page {
+  padding: 0 0 50px;
+}
+
+.app-header .navbar {
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+}
+
+.app-body {
+  max-width: 960px;
+}
+
+.app-footer {
+  position: fixed;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  background-color: #f8f8f8;
+  border: 1px solid #e7e7e7;
+}
+.app-footer .author {
+  margin: 5px 0;
+}
+.app-footer .author span {
+  margin-right: 15px;
+}
+
+.thumbnail .img-responsive {
+  width: 100%;
+}
+.thumbnail .caption {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 10px 0 5px;
+}

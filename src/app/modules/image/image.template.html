@@ -1,5 +1,9 @@
 <div ng-if="vm.loading">Loading image...</div>
 <div ng-if="!vm.loading">
-    <img ng-src="{{vm.image.url}}">
-    <p>{{vm.image.title}}</p>
+    <div class="thumbnail">
+        <img ng-src="{{vm.image.url}}">
+        <div class="caption text-center">
+            {{vm.image.title}}
+        </div>
+    </div>
 </div>

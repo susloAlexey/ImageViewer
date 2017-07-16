@@ -1,6 +1,20 @@
-<div ng-if="vm.loading">Loading images...</div>
-<div ng-if="!vm.loading" ng-repeat="img in vm.images track by $index">
-    <a ui-sref="image({ imageId: img.id })">
-        <img ng-src="{{img.thumbnailUrl}}">
-    </a>
+<div class="text-center" ng-if="vm.loading">Loading images...</div>
+<div class="text-center" ng-if="!vm.loading && !vm.images.length">No images</div>
+<div class="row" ng-if="!vm.loading">
+    <div class="col-lg-4 col-md-4 col-sm-6" ng-repeat="img in vm.images track by $index">
+        <div class="thumbnail">
+            <a ui-sref="image-view({ imageId: img.id })">
+                <img class="img-responsive" ng-src="{{img.thumbnailUrl}}">
+            </a>
+            <div class="caption">
+                {{img.title}}
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-sm btn-default" ui-sref="album-view({ albumId: img.albumId })" title="Go to Album">
+                    <i class="fa fa-book"></i>  
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 </div>

@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('imageViewer', ['ui.router', 'ngResource'])
+        .module('imageViewer')
         .config(function ($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise('/');
@@ -11,12 +11,12 @@
             $stateProvider
                 .state('/', {
                     url: '/',
-                    templateUrl: 'src/app/modules/images-list/images-list.template.html',
+                    templateUrl: 'app/modules/images-list/images-list.template.html',
                     controller: 'ImagesListController as vm'
                 })
-                .state('album', {
+                .state('album-view', {
                     url: '/album/{albumId}',
-                    templateUrl: 'src/app/modules/album/album.template.html',
+                    templateUrl: 'app/modules/album/album.template.html',
                     controller: 'AlbumController as vm',
                     resolve: {
                         albumId: function ($stateParams) {
@@ -24,9 +24,9 @@
                         }
                     }
                 })
-                .state('image', {
+                .state('image-view', {
                     url: '/image/{imageId}',
-                    templateUrl: 'src/app/modules/image/image.template.html',
+                    templateUrl: 'app/modules/image/image.template.html',
                     controller: 'ImageController as vm',
                     resolve: {
                         imageId: function ($stateParams) {
@@ -34,6 +34,5 @@
                         }
                     }
                 });
-
         });
 })();

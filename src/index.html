@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Image Viewer Application">
+    <meta name="author" content="Alex Suslo">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Image Viewer</title>
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body ng-app="imageViewer" ng-cloak>
+    <div class="app-page">
+        <app-header></app-header>
+        <div class="app-body container">
+            <div ui-view></div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+
+    <!-- Application Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.6.4/angular-resource.min.js"></script>
+
+    <!-- Comment in PROD -->
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/shared/directives/header/header.directive.js"></script>
+    <script src="app/shared/directives/footer/footer.directive.js"></script>
+    <script src="app/shared/services/image/image.resources.js"></script>
+    <script src="app/shared/services/image/image.service.js"></script>
+    <script src="app/modules/images-list/images-list.controller.js"></script>
+    <script src="app/modules/album/album.controller.js"></script>
+    <script src="app/modules/image/image.controller.js"></script>
+</body>
+
+</html>
