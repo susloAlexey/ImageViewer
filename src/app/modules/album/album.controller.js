@@ -12,6 +12,10 @@
 
         var vm = this;
 
+        var imagesList;
+
+        vm.loadMore = loadMore;
+
         loadAlbum();
 
         ///////////
@@ -21,12 +25,19 @@
             ImageService.getAlbum(albumId)
                 .then(
                 function success(response) {
-                    vm.images = response;
+                    imagesList = response;
+                    vm.images = imagesList.slice(0, 18);
                     vm.loading = false;
                 },
                 function error(err) {
                     vm.loading = false;
                 });
+        }
+
+        function loadMore() {
+            if (vm.images.length !== imagesList.length) {
+                vm.images = imagesList.slice(0, vm.images.length + 18);
+            }
         }
     }
 })();
