@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         connect: {
             debug: {
                 port: 80,
-                base: 'src/'
+                // base: 'src/'
             }
         },
         open: {
