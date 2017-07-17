@@ -5,7 +5,7 @@
     angular
         .module('imageViewer')
         .constant('ImageResourcesConfig', {
-            base: 'http://jsonplaceholder.typicode.com',
+            base: 'https://jsonplaceholder.typicode.com',
             endpoints: {
                 getImages: {
                     url: '/Photos'
